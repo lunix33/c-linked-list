@@ -1,10 +1,15 @@
 #pragma once
 
+typedef struct ll_node_t ll_node_t;
+
+/**
+ * A double linked list data node.
+ */
 struct ll_node_t {
 	ll_node_t* next;
 	ll_node_t* prev;
-	void* value
-}
+	void* value;
+};
 
 /**
  * @brief Create a new link list node.
@@ -12,7 +17,7 @@ struct ll_node_t {
  * @param next The next node.
  * @param prev The previous node.
  */
-ll_node_t* ll_node_create(void* value, ll_node_t* next, ll_node_t* prev);
+ll_node_t* ll_node_create(void* value, unsigned int data_size, ll_node_t* next, ll_node_t* prev);
 
 /**
  * @brief Free the memory occupied by a node.

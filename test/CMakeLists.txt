@@ -15,7 +15,7 @@ target_link_libraries(linkedlist_test
 	pthread
 	subunit
 	rt
-	ini
+	linkedlist
 )
 
 add_test(linkedlist_test ${CMAKE_CURRENT_BINARY_DIR}/linkedlist_test)

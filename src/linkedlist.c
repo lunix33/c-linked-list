@@ -18,7 +18,7 @@ linkedlist_t* ll_create() {
 void ll_free(linkedlist_t* ll) {
 	// Free every nodes.
 	while (ll->head != NULL) {
-		ll_node_t next = ll->head->next;
+		ll_node_t* next = ll->head->next;
 		ll_node_free(ll->head);
 		ll->head = next;
 	}
@@ -27,10 +27,10 @@ void ll_free(linkedlist_t* ll) {
 	free(ll);
 }
 
-void ll_push_back(linkedlist_t* ll, void* value) {
+void ll_push_back(linkedlist_t* ll, void* value, unsigned int data_size) {
 	
 }
 
-void ll_push_front(linkedlist_t* ll, void* value) {
+void ll_push_front(linkedlist_t* ll, void* value, unsigned int data_size) {
 
 }
