@@ -17,10 +17,13 @@ struct ll_node_t {
  * @param next The next node.
  * @param prev The previous node.
  */
-ll_node_t* ll_node_create(void* value, unsigned int data_size, ll_node_t* next, ll_node_t* prev);
+ll_node_t* ll_node_create(
+	void* value, unsigned int data_size,
+	ll_node_t* next, ll_node_t* prev);
 
 /**
  * @brief Free the memory occupied by a node.
- * @param n The node to be freed.
+ * @param n_ptr A pointer to the node pointer to be freed.
+ * @note If the node was successfully freed, then the node pointer will be NULL.
  */
-void ll_node_free(ll_node_t* n);
+void ll_node_free(ll_node_t** n_ptr);
