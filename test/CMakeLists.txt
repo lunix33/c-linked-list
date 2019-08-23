@@ -4,8 +4,13 @@ enable_testing()
 #include_directories(${CHECK_INCLUDE_DIRS})
 include_directories(. ../src)
 
+set(CMAKE_BUILD_TYPE "Debug")
+
 add_executable(linkedlist_test
 	main.c
+	create_free/ll_create.c
+	create_free/ll_free.c
+	push/ll_push_back.c
 )
 
 target_link_libraries(linkedlist_test
@@ -13,8 +18,6 @@ target_link_libraries(linkedlist_test
 	check
 	m
 	pthread
-	subunit
-	rt
 	linkedlist
 )
 
